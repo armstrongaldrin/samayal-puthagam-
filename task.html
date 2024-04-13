@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<link rel="stylesheet" href="task.css">
+	<title>Task Scheduler</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+            var app = angular.module("taskapp",[])
+            app.controller("ctrltask",function($scope){
+				
+			})
+	</script>
+</head>
+
+<body ng-app="taskapp" ng-controller="ctrltask">
+	<header>
+		<h1>Task Scheduler</h1>
+	</header>
+	<main>
+		<div class="task-form">
+			<input type="text" id="task" placeholder="Enter task...">
+			<select id="priority">
+				<option value="top">Top Priority</option>
+				<option value="middle">Middle Priority</option>
+				<option value="low">Less Priority</option>
+			</select>
+			<input type="date" id="deadline">
+			<button id="add-task">Add Task</button>
+		</div>
+		<div class="task-list" id="task-list" style="background-color: black; color:white;">
+			<table>
+				<tr>
+					<th style="border-radius: 20px; "></th>
+				</tr>
+			</table>
+		</div>
+		<script src="task.js"></script>
+	</main>
+</body>
+
+</html>
